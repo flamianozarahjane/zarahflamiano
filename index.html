@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zarah Flamiano | Freight and Logistics Virtual Assistant portfolio">
+  <title>Zarah Flamiano | Freight Virtual Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#081B2C; --navy-2:#0D2B45; --blue:#146C94; --cyan:#19B7C6;
+      --orange:#F59E42; --ice:#EAF5F7; --paper:#F7FAFC; --white:#FFFFFF;
+      --ink:#13293D; --muted:#66788A; --line:#DCE7ED; --radius:18px;
+      --shadow:0 18px 45px rgba(8,27,44,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    h1,h2,h3,h4,.brand{font-family:'Manrope',sans-serif;line-height:1.18}
+    img{max-width:100%;display:block} a{text-decoration:none;color:inherit}
+    .wrap{width:min(1140px,calc(100% - 40px));margin:auto}
+    .section{padding:86px 0}.soft{background:var(--ice)}
+    .kicker{color:var(--cyan);font:800 .78rem/1 'Manrope';letter-spacing:1.7px;text-transform:uppercase;margin-bottom:14px}
+    .section-head{max-width:720px;margin-bottom:40px}.section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--navy);margin-bottom:14px}.section-head p{color:var(--muted);font-size:1.05rem}
+
+    /* NAVIGATION */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(8,27,44,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{color:white;font-weight:800;font-size:1.04rem;letter-spacing:.2px;display:inline-block;transition:.25s ease}
+    .brand span{color:var(--orange)}.brand:hover{transform:translateY(-2px);text-shadow:0 0 14px rgba(245,158,66,.65)}
+    .links{display:flex;gap:26px;color:#C8D5DE;font-weight:600}.links a:hover{color:white}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:11px;font-weight:800;transition:.22s ease;border:1px solid transparent}
+    .nav-cta{background:var(--cyan);color:var(--navy);padding:10px 18px}.nav-cta:hover,.btn:hover{transform:translateY(-2px)}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 68%,#0B5367 100%);color:white;padding:96px 0 92px}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(25,183,198,.20);border-radius:50%;right:-180px;top:-240px;box-shadow:0 0 0 70px rgba(25,183,198,.04),0 0 0 140px rgba(25,183,198,.03)}
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+    .status{display:inline-flex;align-items:center;gap:9px;color:#BEEEF2;background:rgba(25,183,198,.10);border:1px solid rgba(25,183,198,.30);padding:7px 13px;border-radius:999px;font-weight:700;font-size:.82rem;margin-bottom:24px}
+    .status i{width:8px;height:8px;background:#4ADE80;border-radius:50%;box-shadow:0 0 0 5px rgba(74,222,128,.13)}
+    .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);max-width:780px;margin-bottom:20px}.hero h1 em{font-style:normal;color:var(--cyan)}
+    .hero .lead{color:#C8D8E4;font-size:1.16rem;max-width:690px;margin-bottom:30px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:34px}.btn{padding:13px 22px}.primary{background:var(--orange);color:var(--navy)}.secondary{border-color:rgba(255,255,255,.32);color:white;background:rgba(255,255,255,.04)}
+    .quick-tags{display:flex;flex-wrap:wrap;gap:9px}.quick-tags span{font-size:.82rem;color:#D9E7EF;border:1px solid rgba(255,255,255,.15);padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.05)}
+    .route-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:30px;border-radius:24px;box-shadow:0 25px 70px rgba(0,0,0,.18)}
+    .route-card h3{font-size:1rem;color:#DDEAF2;margin-bottom:22px}.route{display:grid;gap:15px}.route-step{display:grid;grid-template-columns:42px 1fr auto;gap:13px;align-items:center;background:rgba(8,27,44,.52);padding:13px;border-radius:13px}.route-step b:first-child{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:var(--cyan);color:var(--navy)}.route-step small{color:#AFC2CF}.route-step strong{display:block}.check{color:#65E5A2;font-weight:800}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:start}.about-copy p{color:var(--muted);margin-bottom:15px;font-size:1.04rem}.stats{display:grid;grid-template-columns:1fr 1fr;gap:15px}.stat{background:white;border:1px solid var(--line);padding:23px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(8,27,44,.05)}.stat strong{display:block;font:800 1.65rem/1 'Manrope';color:var(--blue);margin-bottom:8px}.stat span{color:var(--muted);font-size:.9rem}
+
+    /* CAPABILITIES */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);padding:25px;border-radius:var(--radius);transition:.22s ease}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#B8DCE2}.icon{width:46px;height:46px;border-radius:13px;background:var(--ice);color:var(--blue);display:grid;place-items:center;font-size:1.25rem;margin-bottom:17px}.card h3{font-size:1.03rem;color:var(--navy);margin-bottom:8px}.card p{color:var(--muted);font-size:.92rem}
+
+    /* WORK SAMPLES */
+    .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.work-card{overflow:hidden;background:white;border:1px solid var(--line);border-radius:22px;box-shadow:0 12px 32px rgba(8,27,44,.07);transition:.23s ease}.work-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .thumb{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#0D2B45,#146C94);overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;transition:.35s ease}.work-card:hover .thumb img{transform:scale(1.025)}
+    .thumb:after{content:'VIDEO DEMO';position:absolute;top:14px;left:14px;background:rgba(8,27,44,.85);color:white;padding:6px 10px;border-radius:999px;font:800 .68rem/1 'Manrope';letter-spacing:1px}.play{position:absolute;inset:0;display:grid;place-items:center}.play span{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(245,158,66,.95);color:var(--navy);font-size:1.15rem;padding-left:3px;box-shadow:0 10px 28px rgba(0,0,0,.23)}
+    .work-body{padding:24px}.work-body h3{color:var(--navy);font-size:1.2rem;margin-bottom:8px}.work-body p{color:var(--muted);margin-bottom:16px}.mini-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}.mini-tags span{color:#0C6172;background:#E5F7F8;padding:5px 9px;border-radius:999px;font-size:.76rem;font-weight:700}.watch{color:var(--blue);font-weight:800}.watch:hover{color:var(--orange)}
+
+    /* TOOLS */
+    .tools{display:flex;flex-wrap:wrap;gap:11px}.tool{background:white;border:1px solid var(--line);padding:10px 16px;border-radius:999px;color:var(--navy);font-weight:700}
+
+    /* CONTACT */
+    .contact-box{background:linear-gradient(120deg,var(--navy),#0B5367);border-radius:26px;padding:58px;color:white;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center;box-shadow:var(--shadow)}.contact-box h2{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:12px}.contact-box p{color:#C9DCE6;max-width:690px}.contact-actions{display:flex;flex-direction:column;gap:11px;min-width:190px}
+    footer{padding:32px;text-align:center;color:var(--muted);font-size:.88rem}
+
+    @media(max-width:900px){.links{display:none}.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}.route-card{max-width:650px}.cards{grid-template-columns:repeat(2,1fr)}.contact-actions{flex-direction:row;flex-wrap:wrap}}
+    @media(max-width:620px){.wrap{width:min(100% - 28px,1140px)}.section{padding:64px 0}.hero{padding:72px 0}.nav-cta{display:none}.hero h1{font-size:2.45rem}.cards,.work-grid,.stats{grid-template-columns:1fr}.contact-box{padding:34px 25px}.route-step{grid-template-columns:38px 1fr}.route-step .check{display:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="#top" class="brand">Zarah <span>Flamiano</span></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#work">Video Demos</a><a href="#tools">Tools</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Let's Talk</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="status"><i></i> Available for remote U.S. logistics support</div>
+          <h1>Reliable freight support from <em>quote to delivery.</em></h1>
+          <p class="lead">I help freight brokers, dispatchers, and logistics teams stay organized through accurate shipment entry, proactive tracking, clear updates, and complete freight documentation.</p>
+          <div class="actions">
+            <a class="btn primary" href="#work">View Video Demos →</a>
+            <a class="btn secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="quick-tags"><span>Track & Trace</span><span>LTL / FTL Support</span><span>TMS Entry</span><span>BOL & POD</span><span>Carrier Vetting</span></div>
+        </div>
+        <aside class="route-card" aria-label="Freight workflow">
+          <h3>End-to-End Freight Workflow</h3>
+          <div class="route">
+            <div class="route-step"><b>01</b><div><strong>Quote</strong><small>Rate research and comparison</small></div><b class="check">✓</b></div>
+            <div class="route-step"><b>02</b><div><strong>Book & Dispatch</strong><small>Accurate TMS shipment setup</small></div><b class="check">✓</b></div>
+            <div class="route-step"><b>03</b><div><strong>Track</strong><small>Check calls and exception alerts</small></div><b class="check">✓</b></div>
+            <div class="route-step"><b>04</b><div><strong>Deliver & Close</strong><small>POD collection and file completion</small></div><b class="check">✓</b></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <div class="kicker">About Me</div>
+          <div class="section-head"><h2>Trained for U.S. freight operations. Backed by years of logistics discipline.</h2></div>
+          <p>I am a Philippines-based Freight Virtual Assistant with hands-on training across the shipment workflow, including quoting, booking, dispatch, tracking, documentation, and POD follow-up.</p>
+          <p>I also bring extensive experience in logistics coordination, controlled documentation, compliance monitoring, and process improvement. My approach is organized, detail-focused, and proactive, especially when a shipment needs timely follow-up or an exception needs escalation.</p>
+          <p>I am ready to learn your SOPs, work within your systems, and provide dependable support during U.S. business hours.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>15+ Years</strong><span>Logistics, documentation, and quality experience</span></div>
+          <div class="stat"><strong>Quote → POD</strong><span>Training across the full freight workflow</span></div>
+          <div class="stat"><strong>Night-Shift Ready</strong><span>Available to support U.S. operating hours</span></div>
+          <div class="stat"><strong>Process Focused</strong><span>Accurate tracking, records, and follow-through</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="services">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Freight Support Services</div><h2>How I can support your daily operations</h2><p>Practical support designed to improve shipment visibility, documentation accuracy, and communication.</p></div>
+        <div class="cards">
+          <article class="card"><div class="icon">⌕</div><h3>LTL Rate Research & Quoting</h3><p>Enter shipment details, compare carrier options, review accessorials, and organize rates for broker review.</p></article>
+          <article class="card"><div class="icon">▦</div><h3>TMS Shipment Entry</h3><p>Input addresses, references, freight details, appointments, and documents with careful field-level accuracy.</p></article>
+          <article class="card"><div class="icon">◎</div><h3>Track & Trace</h3><p>Monitor pickups and deliveries, perform check calls, update milestones, and flag possible delays early.</p></article>
+          <article class="card"><div class="icon">!</div><h3>Exception Management</h3><p>Document shipment issues, follow escalation rules, notify stakeholders, and track actions through resolution.</p></article>
+          <article class="card"><div class="icon">▤</div><h3>Freight Documentation</h3><p>Prepare and organize BOLs, rate confirmations, PODs, invoices, and supporting shipment records.</p></article>
+          <article class="card"><div class="icon">✓</div><h3>Carrier Vetting Support</h3><p>Review authority, insurance, W-9 details, safety indicators, document dates, and carrier packet completeness.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Video Demonstrations</div><h2>See how I work, not just what I can do</h2><p>Each project uses a JPG thumbnail. Clicking the thumbnail or link opens the corresponding video demonstration in a new tab.</p></div>
+        <div class="work-grid">
+          <article class="work-card">
+            <a class="thumb" href="https://drive.google.com/file/d/1nQVLbWWg1WAlqM9wDdQT1Wf423iSoWxF/view?usp=sharing" target="_blank" rel="noopener"><img src="ltl-quote-thumbnail.jpg" alt="LTL quoting video demonstration thumbnail"><span class="play"><span>▶</span></span></a>
+            <div class="work-body"><h3>LTL Quote & Carrier Comparison</h3><p>Preparing a professional quote by entering shipment data, comparing carrier rates, checking accessorials, and organizing the final options.</p><div class="mini-tags"><span>LTL Quoting</span><span>Rate Comparison</span><span>Accessorials</span></div><a class="watch" href="https://drive.google.com/file/d/1nQVLbWWg1WAlqM9wDdQT1Wf423iSoWxF/view?usp=sharing" target="_blank" rel="noopener">Watch video →</a></div>
+          </article>
+          <article class="work-card">
+            <a class="thumb" href="https://drive.google.com/file/d/1TyLm5xBjUe-KaIx0JiVz43FD_odqhWA7/view?usp=sharing" target="_blank" rel="noopener"><img src="shipment-entry-thumbnail.jpg" alt="TMS shipment entry video demonstration thumbnail"><span class="play"><span>▶</span></span></a>
+            <div class="work-body"><h3>Full TMS Shipment Creation</h3><p>Creating a shipment accurately, attaching required documents, updating status, then generating the rate confirmation and BOL.</p><div class="mini-tags"><span>TMS Entry</span><span>Rate Confirmation</span><span>BOL</span></div><a class="watch" href="https://drive.google.com/file/d/1TyLm5xBjUe-KaIx0JiVz43FD_odqhWA7/view?usp=sharing" target="_blank" rel="noopener">Watch video →</a></div>
+          </article>
+          <article class="work-card">
+            <a class="thumb" href="https://drive.google.com/file/d/1aUApFeWxLUg8FjGoHDtpHd7xYr1UAkCD/view?usp=sharing" target="_blank" rel="noopener"><img src="track-trace-thumbnail.jpg" alt="Track and trace dashboard video demonstration thumbnail"><span class="play"><span>▶</span></span></a>
+            <div class="work-body"><h3>Track & Trace Monitoring Dashboard</h3><p>Monitoring check calls, shipment milestones, delays, ETAs, and exceptions through an organized and actionable tracking view.</p><div class="mini-tags"><span>Check Calls</span><span>ETA Monitoring</span><span>Exception Alerts</span></div><a class="watch" href="https://drive.google.com/file/d/1aUApFeWxLUg8FjGoHDtpHd7xYr1UAkCD/view?usp=sharing" target="_blank" rel="noopener">Watch video →</a></div>
+          </article>
+          <article class="work-card">
+            <!-- Replace YOUR_VIDEO_LINK below with your actual Google Drive, YouTube, or Loom URL. -->
+            <a class="thumb" href="YOUR_VIDEO_LINK" target="_blank" rel="noopener"><img src="carrier-vetting-thumbnail.jpg" alt="Carrier vetting best practices video demonstration thumbnail"><span class="play"><span>▶</span></span></a>
+            <div class="work-body"><h3>Carrier Vetting Best Practices</h3><p>Reviewing carrier authority, insurance, W-9 data, document consistency, expiration dates, and approval criteria.</p><div class="mini-tags"><span>FMCSA Review</span><span>Insurance</span><span>Carrier Packet</span></div><a class="watch" href="YOUR_VIDEO_LINK" target="_blank" rel="noopener">Watch video →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="tools">
+      <div class="wrap"><div class="section-head"><div class="kicker">Tools & Systems</div><h2>Comfortable working across logistics and productivity platforms</h2></div>
+        <div class="tools"><span class="tool">TMS Platforms</span><span class="tool">DAT Load Board</span><span class="tool">Carrier Websites</span><span class="tool">Microsoft Excel</span><span class="tool">Power BI</span><span class="tool">Outlook</span><span class="tool">Microsoft Teams</span><span class="tool">Google Workspace</span><span class="tool">Slack</span><span class="tool">Zoom</span><span class="tool">Power Automate</span><span class="tool">Microsoft Copilot</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap"><div class="contact-box"><div><div class="kicker">Ready to Connect?</div><h2>Let me help keep your freight operations moving.</h2><p>I would be glad to walk you through my video demonstrations, trackers, and freight support workflow in an interview.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email Me</a><a class="btn secondary" href="YOUR_RESUME_LINK" target="_blank" rel="noopener">Download Resume</a></div></div></div>
+    </section>
+  </main>
+  <footer>© 2026 Zarah Flamiano · Freight & Logistics Virtual Assistant</footer>
+</body>
+</html>
